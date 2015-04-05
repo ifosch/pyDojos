@@ -1,4 +1,4 @@
-Kata base
-=========
+Kata coins
+==========
 
-Ésta es la kata base para los dojos.
+Ésta es la kata coins para los dojos.
