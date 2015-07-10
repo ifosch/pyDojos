@@ -1,8 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def create_world(alive = None):
-    world = np.zeros((3,3), dtype=int)
+def create_world(shape = None, alive = None):
+    if shape is None:
+        shape = (3, 3)
+    world = np.zeros(shape, dtype=int)
     if alive:
         for position in alive:
             world[position[0], position[1]] = 1
