@@ -6,3 +6,6 @@
 reveal.js
 .cache
 __pycache__
+/gilded-rose/.coverage
+/gilded-rose/cov.html/**
+/gilded-rose/golden_master
