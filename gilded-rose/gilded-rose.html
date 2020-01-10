@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-01-10 Fri 07:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Ignasi Fosch" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge57bc4a">1. Gilded Rose Kata</a>
+<ul>
+<li><a href="#orgcd92abd">1.1. Introduction</a></li>
+<li><a href="#org602a54d">1.2. Requirements and setup</a>
+<ul>
+<li><a href="#org25cb366">1.2.1. Setup with standard tools using <code>requirements.txt</code></a></li>
+<li><a href="#orgc9ff7cb">1.2.2. Setup with Pipenv</a></li>
+</ul>
+</li>
+<li><a href="#org60b8027">1.3. Add testing</a>
+<ul>
+<li><a href="#org2e70d47">1.3.1. Clean up broken state</a></li>
+<li><a href="#orgb3d9935">1.3.2. Make easier to run the test for different cases</a></li>
+<li><a href="#orgcc51456">1.3.3. Make the test characterized</a></li>
+<li><a href="#orga949bc5">1.3.4. Add golden master</a></li>
+<li><a href="#orgc8b54e0">1.3.5. Add test cases</a></li>
+</ul>
+</li>
+<li><a href="#org499190d">1.4. Refactoring</a>
+<ul>
+<li><a href="#org5ab5d76">1.4.1. Separate single item code</a></li>
+<li><a href="#org543124e">1.4.2. Separate specialized code</a></li>
+<li><a href="#org81769b0">1.4.3. Add a wrapping class for Item class</a></li>
+<li><a href="#orgb5f64b0">1.4.4. Provide an Item factory</a></li>
+<li><a href="#orgb080f6b">1.4.5. Make <code>do_update_quality</code> to be a method for a RegularItem</a></li>
+<li><a href="#org184abe0">1.4.6. Specialize RegularItem per item kind</a></li>
+</ul>
+</li>
+<li><a href="#org91aafb8">1.5. Add a new kind of item</a></li>
+<li><a href="#org6aa3a38">1.6. Food for thought</a>
+<ul>
+<li><a href="#org99c04ba">1.6.1. Possible improvements and things to try or experiment</a></li>
+<li><a href="#orgf07f919">1.6.2. Importance of testing(!= TDD) with code</a></li>
+<li><a href="#org33acc08">1.6.3. Usage of testing techniques</a></li>
+<li><a href="#org4828762">1.6.4. Requirements and production code (!)</a></li>
+<li><a href="#org7252cc4">1.6.5. Tools to review</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge57bc4a" class="outline-2">
+<h2 id="orge57bc4a"><span class="section-number-2">1</span> Gilded Rose Kata</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgcd92abd" class="outline-3">
+<h3 id="orgcd92abd"><span class="section-number-3">1.1</span> Introduction</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+In this kata, a piece of legacy code and a requirement set are provided as the starting point.
+The piece of code updates quality and days to expiration of a list of items, depending on certain rules related to the type of item.
+These rules are provided in the <a href="https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt">requirements</a> provided by the business direction.
+</p>
+
+<p>
+The exercise was designed to practive finding out how adding tests to a piece of legacy code, validating the business rules.
+Also to show how to drive refactoring and new feature adding.
+When doing this exercist, writing the tests is pretty hard since the requirements and the code are complex, and hard to understand.
+Also, there are some caveats hidden in the exercise, that will drive the developer to certain trade-off decisions.
+</p>
+
+<p>
+This text won't offer much more detail about this way of resolving the exercise, in order to not unveil all the fun in this path.
+For the sake of brevity, in this exercise, the provided piece of code will be considered current production code.
+So further alterations to its behavior will be considered bugs, even when they stick to the requirements.
+</p>
+
+<p>
+There are some techniques to be used in this exercise that could be helpful to learn and to practice.
+</p>
+<ul class="org-ul">
+<li>Use <a href="http://doc.pytest.org/en/latest/example/parametrize.html">parameterized tests</a> and <a href="https://en.wikipedia.org/wiki/All-pairs_testing">testing combination</a>.</li>
+<li>Use <a href="https://en.wikipedia.org/wiki/Characterization_test">golden master or test characterization</a></li>
+<li>Use <a href="https://en.wikipedia.org/wiki/Code_coverage">coverage measurements</a> to quickly find <a href="https://en.wikipedia.org/wiki/Test_case">test cases</a></li>
+<li>Use <a href="https://en.wikipedia.org/wiki/Mutation_testing">mutation testing</a> (at least manually)</li>
+<li>Use coverage again to iterate on refactorings</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org602a54d" class="outline-3">
+<h3 id="org602a54d"><span class="section-number-3">1.2</span> Requirements and setup</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+First, clone this repository, and go to your working copy.
+</p>
+
+<p>
+For this exercise you'll need a virtual environment with:
+</p>
+<ul class="org-ul">
+<li>pytest</li>
+<li>pytest-cov</li>
+</ul>
+</div>
+
+<div id="outline-container-org25cb366" class="outline-4">
+<h4 id="org25cb366"><span class="section-number-4">1.2.1</span> Setup with standard tools using <code>requirements.txt</code></h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+You can go with your favorite virtual environment tool, supporting <code>pip</code>.
+So, create a Python 3.7+ environment and use the provided <code>requirements.txt</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">pip install -r requirements.txt
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc9ff7cb" class="outline-4">
+<h4 id="orgc9ff7cb"><span class="section-number-4">1.2.2</span> Setup with <a href="https://github.com/pypa/pipenv">Pipenv</a></h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+<code>Pipfile</code> and <code>Pipfile.lock</code> are also provided, so if you prefer to go on with <code>pipenv</code>, it should also work:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">pipenv shell
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org60b8027" class="outline-3">
+<h3 id="org60b8027"><span class="section-number-3">1.3</span> Add testing</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org2e70d47" class="outline-4">
+<h4 id="org2e70d47"><span class="section-number-4">1.3.1</span> Clean up broken state</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgd15d94f"></a>Make initial test pass<br />
+<ol class="org-ol">
+<li><a id="org83b4c72"></a>Run tests<br />
+<div class="outline-text-6" id="text-1-3-1-1-1">
+<p>
+Provided test should fail:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">pytest .
+</pre>
+</div>
+
+<pre class="example">
+❯ pytest .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 1 item                                                                                                                           
+
+test_gilded_rose.py F                                                                                                                [100%]
+
+================================================================= FAILURES =================================================================
+_________________________________________________________________ test_foo _________________________________________________________________
+
+    def test_foo():
+        items = [Item("foo", 0, 0)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+&gt;       assert "fixme" == items[0].name
+E       AssertionError: assert 'fixme' == 'foo'
+E         - fixme
+E         + foo
+
+test_gilded_rose.py:11: AssertionError
+============================================================ 1 failed in 0.11s =============================================================
+</pre>
+</div>
+</li>
+
+<li><a id="orgb07e5ef"></a>Fix the invalid test<br />
+<div class="outline-text-6" id="text-1-3-1-1-2">
+<p>
+In <code>test_gilded_rose.py</code>, change the line with the assert to have <code>fixme</code> replaced with <code>foo</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">...
+    <span style="color: #a020f0;">assert</span> <span style="color: #8b2252;">"foo"</span> == items[0].name
+...
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org763d4bc"></a>Run pytest again<br />
+<div class="outline-text-6" id="text-1-3-1-1-3">
+<p>
+Now running tests again should pass.
+</p>
+
+<pre class="example">
+❯ pytest .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 1 item                                                                                                                           
+
+test_gilded_rose.py .                                                                                                                [100%]
+
+============================================================ 1 passed in 0.02s =============================================================
+</pre>
+
+<p>
+You might want to use verbose output from pytest:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">pytest -v .
+</pre>
+</div>
+
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 1 item                                                                                                                           
+
+test_gilded_rose.py::test_foo PASSED                                                                                                 [100%]
+
+============================================================ 1 passed in 0.02s =============================================================
+</pre>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org8c251b1"></a>Change test function name to <code>test_update_quality</code> for clarity<br />
+<div class="outline-text-5" id="text-1-3-1-2">
+<p>
+This is just an aesthetical change to make the test function's name more appropriate:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">...
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">test_update_quality</span>():
+...
+</pre>
+</div>
+
+<p>
+Running pytest should provide equivalent output.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgb3d9935" class="outline-4">
+<h4 id="orgb3d9935"><span class="section-number-4">1.3.2</span> Make easier to run the test for different cases</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgd26e592"></a>Parameterize the test<br />
+<div class="outline-text-5" id="text-1-3-2-1">
+<p>
+Use the <code>pytest.mark.parametrize</code> decorator to inject the test cases and expected results.
+Remember to add the arguments in the test function definition.
+</p>
+
+<p>
+Use the test cases and expectation in the test code.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">import</span> pytest
+...
+<span style="color: #228b22;">@pytest.mark.parametrize</span>(
+    <span style="color: #8b2252;">"test_input, expected_name"</span>,
+    [
+        (Item(<span style="color: #8b2252;">"foo"</span>, 0, 0), <span style="color: #8b2252;">"foo"</span>),
+    ],
+)
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">test_update_quality</span>(test_input, expected_name):
+    <span style="color: #a0522d;">items</span> = [test_input]
+    ...
+    <span style="color: #a020f0;">assert</span> expected_name == items[0].name
+</pre>
+</div>
+
+<p>
+Ensure the tests still pass:
+</p>
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 1 item                                                                                                                           
+
+test_gilded_rose.py::test_update_quality[test_input0-foo] PASSED                                                                     [100%]
+
+============================================================ 1 passed in 0.03s =============================================================
+</pre>
+
+<p>
+Notice pytest just identified the test case.
+Next, try to add another test:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">...
+    (Item(<span style="color: #8b2252;">"foo"</span>, 0, 0), <span style="color: #8b2252;">"foo"</span>),
+    (Item(<span style="color: #8b2252;">"foo"</span>, 0, 1), <span style="color: #8b2252;">"foo"</span>),
+...
+</pre>
+</div>
+
+<p>
+Ensure the tests still pass, and we have a new test case:
+</p>
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 2 items                                                                                                                          
+
+test_gilded_rose.py::test_update_quality[test_input0-foo] PASSED                                                                     [ 50%]
+test_gilded_rose.py::test_update_quality[test_input1-foo] PASSED                                                                     [100%]
+
+============================================================ 2 passed in 0.03s =============================================================
+</pre>
+</div>
+</li>
+
+<li><a id="org03712dc"></a>Make the test function check all attributes<br />
+<div class="outline-text-5" id="text-1-3-2-2">
+<p>
+In order to have our test validate other item attributes than name, modify the test to expect a full string representation.
+We're chosing the full string representation since this is already implemented in the <code>Item</code> class (see the <code>__str__</code> method).
+Remember to use <code>str(items[0])</code> to get the string representation for the object.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #228b22;">@pytest.mark.parametrize</span>(
+    <span style="color: #8b2252;">"test_input, expected"</span>,
+    [
+        (Item(<span style="color: #8b2252;">"foo"</span>, 0, 0), <span style="color: #8b2252;">"foo, 0, 0"</span>),
+        (Item(<span style="color: #8b2252;">"foo"</span>, 0, 1), <span style="color: #8b2252;">"foo, 0, 1"</span>),
+    ],
+)
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">test_update_quality</span>(test_input, expected):
+    ...
+    <span style="color: #a020f0;">assert</span> expected == <span style="color: #483d8b;">str</span>(items[0])
+</pre>
+</div>
+
+<p>
+However, this will fail, since the expectations are not correct:
+</p>
+<pre class="example">
+❯ pytest -v .
+...
+
+test_gilded_rose.py::test_update_quality[test_input0-foo, 0, 0] FAILED                                                               [ 50%]
+test_gilded_rose.py::test_update_quality[test_input1-foo, 0, 1] FAILED                                                               [100%]
+
+================================================================= FAILURES =================================================================
+________________________________________________ test_update_quality[test_input0-foo, 0, 0] ________________________________________________
+
+test_input = foo, -1, 0, expected = 'foo, 0, 0'
+
+    @pytest.mark.parametrize(
+        "test_input, expected",
+        [
+            (Item("foo", 0, 0), "foo, 0, 0"),
+            (Item("foo", 0, 1), "foo, 0, 1"),
+        ],
+    )
+    def test_update_quality(test_input, expected):
+        items = [test_input]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+&gt;       assert expected == str(items[0])
+E       AssertionError: assert 'foo, 0, 0' == 'foo, -1, 0'
+E         - foo, 0, 0
+E         + foo, -1, 0
+
+test_gilded_rose.py:19: AssertionError
+________________________________________________ test_update_quality[test_input1-foo, 0, 1] ________________________________________________
+
+test_input = foo, -1, 0, expected = 'foo, 0, 1'
+
+    @pytest.mark.parametrize(
+        "test_input, expected",
+        [
+            (Item("foo", 0, 0), "foo, 0, 0"),
+            (Item("foo", 0, 1), "foo, 0, 1"),
+        ],
+    )
+    def test_update_quality(test_input, expected):
+        items = [test_input]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+&gt;       assert expected == str(items[0])
+E       AssertionError: assert 'foo, 0, 1' == 'foo, -1, 0'
+E         - foo, 0, 1
+E         + foo, -1, 0
+
+test_gilded_rose.py:19: AssertionError
+============================================================ 2 failed in 0.05s =============================================================
+</pre>
+
+<p>
+So let's update the expectations with the right results:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #228b22;">@pytest.mark.parametrize</span>(
+    <span style="color: #8b2252;">"test_input, expected"</span>,
+    [
+        (Item(<span style="color: #8b2252;">"foo"</span>, 0, 0), <span style="color: #8b2252;">"foo, -1, 0"</span>),
+        (Item(<span style="color: #8b2252;">"foo"</span>, 0, 1), <span style="color: #8b2252;">"foo, -1, 0"</span>),
+    ],
+)
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">test_update_quality</span>(test_input, expected):
+    ...
+    <span style="color: #a020f0;">assert</span> expected == <span style="color: #483d8b;">str</span>(items[0])
+</pre>
+</div>
+
+<p>
+And validate the tests are passing now:
+</p>
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 2 items                                                                                                                          
+
+test_gilded_rose.py::test_update_quality[test_input0-foo, -1, 0] PASSED                                                              [ 50%]
+test_gilded_rose.py::test_update_quality[test_input1-foo, -1, 0] PASSED                                                              [100%]
+
+============================================================ 2 passed in 0.02s =============================================================
+</pre>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgcc51456" class="outline-4">
+<h4 id="orgcc51456"><span class="section-number-4">1.3.3</span> Make the test characterized</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+Now, we'll make some changes to our test in order to be a <a href="https://en.wikipedia.org/wiki/Characterization_test">characterization test</a>, also called golden master testing.
+We'll do this in a few steps.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org20fa673"></a>Split test cases in input and expectations<br />
+<div class="outline-text-5" id="text-1-3-3-1">
+<p>
+First, use <code>zip</code> to have the test inputs and expectations separate.
+</p>
+<div class="org-src-container">
+<pre class="src src-python">...
+
+<span style="color: #228b22;">@pytest.mark.parametrize</span>(
+    <span style="color: #8b2252;">"test_input, expected"</span>,
+    <span style="color: #483d8b;">zip</span>(
+        [
+            Item(<span style="color: #8b2252;">"foo"</span>, 0, 0),
+            Item(<span style="color: #8b2252;">"foo"</span>, 0, 1),
+        ],
+        [
+            <span style="color: #8b2252;">"foo, -1, 0"</span>,
+            <span style="color: #8b2252;">"foo, -1, 0"</span>,
+        ],
+    )
+...
+
+</pre>
+</div>
+
+<p>
+Ensure all the tests still pass:
+</p>
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 2 items                                                                                                                          
+
+test_gilded_rose.py::test_update_quality[test_input0-foo, -1, 0] PASSED                                                              [ 50%]
+test_gilded_rose.py::test_update_quality[test_input1-foo, -1, 0] PASSED                                                              [100%]
+
+============================================================ 2 passed in 0.03s =============================================================
+</pre>
+</div>
+</li>
+
+<li><a id="org225da8a"></a>Build up test cases by combining possible values for attributes<br />
+<div class="outline-text-5" id="text-1-3-3-2">
+<p>
+We want to have extensively generated test cases, based on lists of possible values for each attribute.
+Let's have a list comprehension to get a generator for the test cases from three separate lists of possible attributes.
+For the combination part, we'll use <code>itertools.product</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">from</span> itertools <span style="color: #a020f0;">import</span> product
+...
+<span style="color: #228b22;">@pytest.mark.parametrize</span>(
+    <span style="color: #8b2252;">"test_input, expected"</span>,
+    <span style="color: #483d8b;">zip</span>(
+        [Item(*c) <span style="color: #a020f0;">for</span> c <span style="color: #a020f0;">in</span> product(
+            [<span style="color: #8b2252;">"foo"</span>],
+            [0],
+            [0, 1],
+        )],
+        ...
+</pre>
+</div>
+
+<p>
+Validate tests are ok and complete:
+</p>
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 2 items                                                                                                                          
+
+test_gilded_rose.py::test_update_quality[test_input0-foo, -1, 0] PASSED                                                              [ 50%]
+test_gilded_rose.py::test_update_quality[test_input1-foo, -1, 0] PASSED                                                              [100%]
+
+============================================================ 2 passed in 0.02s ============================================================
+</pre>
+
+<p>
+Now, extract this list comprehension to a function, so we can have this parametrized separately:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">combine_attributes</span>(*attributes_lists, constructor):
+    <span style="color: #a020f0;">return</span> [constructor(*c) <span style="color: #a020f0;">for</span> c <span style="color: #a020f0;">in</span> product(*attributes_lists)]
+
+
+<span style="color: #228b22;">@pytest.mark.parametrize</span>(
+    <span style="color: #8b2252;">"test_input, expected"</span>,
+    <span style="color: #483d8b;">zip</span>(
+        combine_attributes(
+            [<span style="color: #8b2252;">"foo"</span>],
+            [0],
+            [0],
+            constructor=Item,
+        ),
+        ...
+</pre>
+</div>
+
+<p>
+Validate tests are ok and complete:
+</p>
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 2 items                                                                                                                          
+
+test_gilded_rose.py::test_update_quality[test_input0-foo, -1, 0] PASSED                                                              [ 50%]
+test_gilded_rose.py::test_update_quality[test_input1-foo, -1, 0] PASSED                                                              [100%]
+
+============================================================ 2 passed in 0.02s ============================================================
+</pre>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orga949bc5" class="outline-4">
+<h4 id="orga949bc5"><span class="section-number-4">1.3.4</span> Add golden master</h4>
+<div class="outline-text-4" id="text-1-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org4acad0b"></a>Add store of golden master<br />
+<div class="outline-text-5" id="text-1-3-4-1">
+<p>
+If we would add more test inputs, we'll have to add the corresponding expectations, but these would be hard to guess.
+So, we'll make the test characterized by adding the ability to store the results on the inputs in a file called <code>golden_master</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">...
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">test_update_quality</span>(test_input, expected):
+    ...
+    <span style="color: #a0522d;">result</span> = <span style="color: #483d8b;">str</span>(items[0])
+    <span style="color: #a020f0;">with</span> <span style="color: #483d8b;">open</span>(<span style="color: #8b2252;">'golden_master'</span>, <span style="color: #8b2252;">'a+'</span>) <span style="color: #a020f0;">as</span> golden_master:
+        golden_master.write(<span style="color: #8b2252;">'{}\n'</span>.<span style="color: #483d8b;">format</span>(result))
+    <span style="color: #a020f0;">assert</span> expected == result
+</pre>
+</div>
+
+<p>
+Now, run the tests, ensuring the results are still valid, and checkout the <code>golden_master</code> file:
+</p>
+<pre class="example">
+❯ pytest -v .
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.7.3, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/ifosch/.local/share/virtualenvs/gilded-rose-bK_D2OnG/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ifosch/src/github.com/BCNDojos/pyDojos/gilded-rose
+plugins: cov-2.8.1
+collected 2 items                                                                                                                          
+
+test_gilded_rose.py::test_update_quality[test_input0-foo, -1, 0] PASSED                                                              [ 50%]
+test_gilded_rose.py::test_update_quality[test_input1-foo, -1, 0] PASSED                                                              [100%]
+
+============================================================ 2 passed in 0.03s =============================================================
+  gilded-rose-coverage-test U:1 ?:1  ❲p❳ gilded-rose-bK_D2OnG  ❲r❳ ruby-2.0.0-p481  ~/src/github.com/BCNDojo 00:43:18  ⚡100%  ifosch                                                                                                                                     
+❯ cat golden_master 
+foo, -1, 0
+foo, -1, 0
+</pre>
+
+<p>
+The point now is that we don't want to generate the golden master everytime we run the tests, but to signal pytest execution through adding an option to its CLI.
+So we'll add another option parsing to pytest, and a new fixture to read it, using the <code>conftest.py</code> file in the root of the project directory:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">import</span> os
+
+<span style="color: #a020f0;">import</span> pytest
+
+
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">pytest_addoption</span>(parser):
+    parser.addoption(
+        <span style="color: #8b2252;">"--save-golden-masters"</span>, action=<span style="color: #8b2252;">"store_true"</span>,
+        <span style="color: #483d8b;">help</span>=<span style="color: #8b2252;">"reset golden master benchmarks"</span>,
+    )
+
+
+<span style="color: #228b22;">@pytest.fixture</span>(scope=<span style="color: #8b2252;">"session"</span>)
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">save_golden_masters</span>(request):
+    <span style="color: #a020f0;">return</span> request.config.getoption(<span style="color: #8b2252;">"--save-golden-masters"</span>)
+
+
+<span style="color: #228b22;">@pytest.fixture</span>(scope=<span style="color: #8b2252;">"session"</span>, autouse=<span style="color: #008b8b;">True</span>)
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">clear_golden_masters</span>(save_golden_masters):
+    <span style="color: #a020f0;">if</span> save_golden_masters:
+        <span style="color: #a020f0;">try</span>:
+            os.remove(<span style="color: #8b2252;">'golden_master'</span>)
+        <span style="color: #a020f0;">except</span> <span style="color: #228b22;">FileNotFoundError</span>:
+            <span style="color: #a020f0;">pass</span>
+    <span style="color: #a020f0;">yield</span>
+</pre>
+</div>
+<p>
+This file is read and loaded by pytest, and the fixture is a possible parameter to test functions.
+</p>
+
+<p>
+So, inject this fixture to the test function, and make the writing of golden master dependant on this value:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">test_update_quality</span>(test_input, expected, save_golden_masters):
+    ...
+    <span style="color: #a020f0;">if</span> save_golden_masters:
+        <span style="color: #a020f0;">with</span> <span style="color: #483d8b;">open</span>(<span style="color: #8b2252;">'golden_master'</span>, <span style="color: #8b2252;">'a+'</span>) <span style="color: #a020f0;">as</span> golden_master:
+            golden_master.write(<span style="color: #8b2252;">'{}\n'</span>.<span style="color: #483d8b;">format</span>(result))
+    <span style="color: #a020f0;">assert</span> expected == result
+</pre>
+</div>
+
+<p>
+Then test this works by running pytest first with the option, and then without:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">rm golden_master
+pytest --save-golden-masters .
+</pre>
+</div>
+<p>
+This should still pass, but also create the <code>golden_master</code> file and its contents matches the expected output.
+</p>
+
+<p>
+Then remove the file, and run it again without the option, to ensure the file won't get created:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">rm golden_master
+pytest .
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org7a13234"></a>Add reading golden master<br />
+<div class="outline-text-5" id="text-1-3-4-2">
+<p>
+Now, we want to add loading the expectation from the golden master.
+Add <code>read_golden_master</code> function to read the golden<sub>master</sub> file, if present, returning a list of the lines. Remember stripping the last new line on each line.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">read_golden_master</span>(length=0):
+    <span style="color: #a0522d;">output</span> = []
+    <span style="color: #a020f0;">try</span>:
+        <span style="color: #a020f0;">with</span> <span style="color: #483d8b;">open</span>(<span style="color: #8b2252;">'golden_master'</span>) <span style="color: #a020f0;">as</span> golden_master:
+            <span style="color: #a0522d;">output</span> = [l.strip() <span style="color: #a020f0;">for</span> l <span style="color: #a020f0;">in</span> golden_master.readlines()]
+        <span style="color: #a020f0;">if</span> <span style="color: #483d8b;">len</span>(output) &lt; length:
+            output.extend([<span style="color: #8b2252;">""</span> <span style="color: #a020f0;">for</span> _ <span style="color: #a020f0;">in</span> <span style="color: #483d8b;">range</span>(length-1)])
+    <span style="color: #a020f0;">except</span> <span style="color: #228b22;">FileNotFoundError</span>:
+        <span style="color: #a0522d;">output</span> = <span style="color: #483d8b;">iter</span>(<span style="color: #483d8b;">str</span>, <span style="color: #8b2252;">"end"</span>)
+    <span style="color: #a020f0;">return</span> output
+
+
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">produce_params</span>(*attributes_lists, constructor):
+    <span style="color: #a0522d;">test_input</span> = combine_attributes(*attributes_lists, constructor=constructor)
+    <span style="color: #a0522d;">expected</span> = read_golden_master(<span style="color: #483d8b;">len</span>(test_input))
+    <span style="color: #a020f0;">return</span> <span style="color: #483d8b;">zip</span>(test_input, expected)
+
+
+<span style="color: #228b22;">@pytest.mark.parametrize</span>(
+    <span style="color: #8b2252;">"test_input, expected"</span>,
+    produce_params(
+            [<span style="color: #8b2252;">"foo"</span>],
+            [0],
+            [0, 1],
+            constructor=Item,
+    ),
+)
+...
+</pre>
+</div>
+<p>
+Then, run the tests without golden master, but the option to create them. This should fail, but should generate the file:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">rm golden_masters
+pytest --save-golden-masters .
+cat golden_masters
+pytest .
+</pre>
+</div>
+<p>
+The second run should pass as expected.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgc8b54e0" class="outline-4">
+<h4 id="orgc8b54e0"><span class="section-number-4">1.3.5</span> Add test cases</h4>
+<div class="outline-text-4" id="text-1-3-5">
+</div>
+<ol class="org-ol">
+<li><a id="orgea6539f"></a>Run test outputting the test coverage<br />
+<div class="outline-text-5" id="text-1-3-5-1">
+<p>
+Run the following command:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">pytest --cov=gilded_rose --cov=item --cov-report term-missing --cov-report html:cov.html --cov-branch -v .
+</pre>
+</div>
+<p>
+Then open the index.html file generated.
+</p>
+</div>
+</li>
+
+<li><a id="org25e659c"></a>Increase parameters to produce until coverage is 100%<br />
+<div class="outline-text-5" id="text-1-3-5-2">
+<p>
+To cover line 15, add "Aged Brie".
+Then use pytest to save golden master (this run will fail), and validate with the same pytest command to get coverage.
+Review the new coverage now.
+Notice line 15 is now green, but we haven't tried with Backstage passes.
+Use the <code>aged_brie</code> variable from <code>gilded_rose</code> to add it to the product list.
+</p>
+</div>
+</li>
+
+<li><a id="orgff48bbf"></a>Possible other cases (Mutation testing)<br />
+<div class="outline-text-5" id="text-1-3-5-3">
+<p>
+Change relevant and unchecked code <code>gilded_rose.py</code> and run your tests (without saving the golden master).
+If your test fail, then we are having this mutation catched.
+If it passes when it shouldn't, then, you should review what test case are you missing: Undo the change, identify the missing value, validate by recreating the golden master, and repeat with the change to validate new tests. On each retry of this procedure, you'll need to undo changes and recreate the golden master.
+There are two more values to add here, but not easy to find.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org499190d" class="outline-3">
+<h3 id="org499190d"><span class="section-number-3">1.4</span> Refactoring</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+In all of the following steps, it is expected the tests to be run and validated.
+The code coverage should be kept at 100%, including new files.
+In some steps, it is strongly recommended to use coverage analysis to review dead code for removal.
+</p>
+</div>
+
+<div id="outline-container-org5ab5d76" class="outline-4">
+<h4 id="org5ab5d76"><span class="section-number-4">1.4.1</span> Separate single item code</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+Extract for loop's body to a separate method <code>do_update_quality</code> and have <code>update_quality</code> use it for each item.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org543124e" class="outline-4">
+<h4 id="org543124e"><span class="section-number-4">1.4.2</span> Separate specialized code</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+By iterating on duplicating, splitting, and using coverage to find out dead code to remove, separate the code on item kinds.
+Run the tests, and take a look to the coverage.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81769b0" class="outline-4">
+<h4 id="org81769b0"><span class="section-number-4">1.4.3</span> Add a wrapping class for Item class</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<p>
+By creating a new class to wrap Item, its features can be used and overwritten without modifying the original Item class.
+There are different ways to do that, it is suggested to use the most straight forward.
+Once did, modify <code>gilded_rose.py</code> to import this class instead of <code>Item</code>, but as <code>Item</code>, so the code needs no changes.
+When running the tests, add this new module with another <code>--cov</code> argument. Validate the tests pass, and review the code coverage.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5f64b0" class="outline-4">
+<h4 id="orgb5f64b0"><span class="section-number-4">1.4.4</span> Provide an Item factory</h4>
+<div class="outline-text-4" id="text-1-4-4">
+<p>
+Since more specialized products will be inherating from <code>RegularItem</code>, we can't specialize their creation in it.
+Let's use the Factory pattern here, so add a factory function to generate the item objects.
+Then modify the <code>gilded_rose</code> module to use this as Item, instead of the <code>RegularItem</code> class.
+Again, add the new module to the test run, validate the results, and review the coverage.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb080f6b" class="outline-4">
+<h4 id="orgb080f6b"><span class="section-number-4">1.4.5</span> Make <code>do_update_quality</code> to be a method for a RegularItem</h4>
+<div class="outline-text-4" id="text-1-4-5">
+<p>
+Move <code>do_update_quality</code> code to RegularItem <code>update_quality</code> method and make <code>update_quality</code> use the method.
+You'll need to import <code>aged_brie</code>, <code>backstage</code>, and <code>sulfuras</code> from <code>gilded_rose.py</code>, and change <code>item</code> with <code>self</code>.
+Ensure tests still pass and coverage is ok.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org184abe0" class="outline-4">
+<h4 id="org184abe0"><span class="section-number-4">1.4.6</span> Specialize RegularItem per item kind</h4>
+<div class="outline-text-4" id="text-1-4-6">
+<p>
+Iterate on specializing <code>RegularItem</code> class in new classes per item kind.
+Create one new class, move the code in the RegularItem update<sub>quality</sub> method corresponding to this type of item to its own method.
+Make the factory to use this new class to create this kind of items.
+Validate tests and coverage, adding the new module.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org91aafb8" class="outline-3">
+<h3 id="org91aafb8"><span class="section-number-3">1.5</span> Add a new kind of item</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Check out the <a href="https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt">original exercise's requirements</a> and try now to add this new product.
+It is stronly recommended to try this using TDD, but you can go with just regular testing as well.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6aa3a38" class="outline-3">
+<h3 id="org6aa3a38"><span class="section-number-3">1.6</span> Food for thought</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-org99c04ba" class="outline-4">
+<h4 id="org99c04ba"><span class="section-number-4">1.6.1</span> Possible improvements and things to try or experiment</h4>
+<div class="outline-text-4" id="text-1-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf5b53b7"></a>Make the relation between special items and its names in a different way<br /></li>
+
+<li><a id="org05fd366"></a>Make the golden master code more generic<br /></li>
+
+<li><a id="org83b653f"></a>Make the golden master file contain both the inputs used and the resulting output<br /></li>
+
+<li><a id="orgc36a1e1"></a>Alternative architectures than inheritance<br /></li>
+
+<li><a id="orgaa45d47"></a>Refactor to a functional design, not OO<br /></li>
+
+<li><a id="orgbd864bf"></a>Different ways to construct tests<br /></li>
+
+<li><a id="org60d2baf"></a>Not use full string representation to evaluate the result is ok<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgf07f919" class="outline-4">
+<h4 id="orgf07f919"><span class="section-number-4">1.6.2</span> Importance of testing(!= TDD) with code</h4>
+</div>
+
+<div id="outline-container-org33acc08" class="outline-4">
+<h4 id="org33acc08"><span class="section-number-4">1.6.3</span> Usage of testing techniques</h4>
+<div class="outline-text-4" id="text-1-6-3">
+</div>
+<ol class="org-ol">
+<li><a id="org882cb1b"></a>Coverage to ensure completion<br />
+<ol class="org-ol">
+<li><a id="org87d7e88"></a>Recommended to watch <a href="https://www.youtube.com/watch?v=zyM2Ep28ED8">Emily Blache guiding this exercise</a><br /></li>
+
+<li><a id="orgf0f7670"></a>Coverage visualization in python (partial coverage and mutation testing is important)<br /></li>
+
+<li><a id="org620a12c"></a>Other (external) tools could help<br /></li>
+</ol>
+</li>
+
+<li><a id="org3f45a90"></a>Golden master<br />
+<ol class="org-ol">
+<li><a id="org5117484"></a>Couldn't find any pytest plugin for this&#x2026; might be impossible?<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org4828762" class="outline-4">
+<h4 id="org4828762"><span class="section-number-4">1.6.4</span> Requirements and production code (!)</h4>
+</div>
+
+<div id="outline-container-org7252cc4" class="outline-4">
+<h4 id="org7252cc4"><span class="section-number-4">1.6.5</span> Tools to review</h4>
+<div class="outline-text-4" id="text-1-6-5">
+</div>
+<ol class="org-ol">
+<li><a id="org7324e36"></a><a href="https://github.com/approvals/ApprovalTests.Python">ApprovalTests</a><br /></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ignasi Fosch</p>
+<p class="date">Created: 2020-01-10 Fri 07:47</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
